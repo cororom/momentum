@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <title>Momentum</title>
+  </head>
+  <body>
+    <div class="container">
+      <main class="main-content">
+        <section class="content-left">
+          <header class="content-left__header">
+            <div class="logo">
+              <img src="https://nomadcoders.co/m.svg" />
+              <span>Nomad</span>
+            </div>
+            <span class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+          </header>
+          <article class="weather">
+            <h1>Today Weather</h1>
+            <div class="article-content">
+              <div class="weather__today">
+                <div class="weather__main">
+                  <span class="weather__icon"><i class="fa-regular fa-circle-question"></i></span>
+                  <div class="weather__text">
+                    <span class="weather__title">Unknown</span>
+                    <span class="weather__city">Unknown</span>
+                  </div>
+                </div>
+                <div class="weather__summary">
+                  <span class="weather__humidity">NaN</span>
+                  <span class="weather__wind">NaN</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="weather">
+            <h1>Daily Weather</h1>
+            <div class="article-content">
+              <div class="weather__daily row0">
+                <div class="weather__main">
+                  <span class="weather__icon"><i class="fa-regular fa-circle-question"></i></span>
+                </div>
+                <div class="weather__summary">
+                  <span class="weather__temp-max">NaN</span>
+                  <span class="weather__temp-min">NaN</span>
+                </div>
+              </div>
+              <div class="weather__daily row1">
+                <div class="weather__main">
+                  <span class="weather__icon"><i class="fa-regular fa-circle-question"></i></span>
+                </div>
+                <div class="weather__summary">
+                  <span class="weather__temp-max">NaN</span>
+                  <span class="weather__temp-min">NaN</span>
+                </div>
+              </div>
+              <div class="weather__daily row2">
+                <div class="weather__main">
+                  <span class="weather__icon"><i class="fa-regular fa-circle-question"></i></span>
+                </div>
+                <div class="weather__summary">
+                  <span class="weather__temp-max">NaN</span>
+                  <span class="weather__temp-min">NaN</span>
+                </div>
+              </div>
+              <div class="weather__daily row3">
+                <div class="weather__main">
+                  <span class="weather__icon"><i class="fa-regular fa-circle-question"></i></span>
+                </div>
+                <div class="weather__summary">
+                  <span class="weather__temp-max">NaN</span>
+                  <span class="weather__temp-min">NaN</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="content-center">
+          <article class="todo">
+            <h1>To Do List</h1>
+            <form id="todo-form">
+              <input required type="text" placeholder="Write a To Do and Press Enter" />
+            </form>
+            <ul class="todo-list"></ul>
+          </article>
+        </section>
+        <section class="content-right">
+          <article class="greetings">
+            <h1 id="greeting"></h1>
+          </article>
+          <article class="song">
+            <div class="article-content">
+              <audio src="music/Carl Storm - With You In The Morning.mp3" id="audio" preload="metadata"></audio>
+              <div class="song__data">
+                <img src="image/Carl Storm - With You In The Morning.jpg" />
+                <div>
+                  <span class="song__title">title</span>
+                  <span class="song__artist">artist</span>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress__bar">
+                  <div class="progress__played"></div>
+                  <div class="progress__total"></div>
+                </div>
+                <div class="progress__time">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="actions">
+                <span class="random">
+                  <i class="fa-solid fa-random"></i>
+                </span>
+                <span class="backward">
+                  <i class="fa-solid fa-backward fa-lg"></i>
+                </span>
+                <span class="play">
+                  <i class="fa-solid fa-play"></i>
+                </span>
+                <span class="forward">
+                  <i class="fa-solid fa-forward fa-lg"></i>
+                </span>
+                <span class="repeat">
+                  <i class="fa-solid fa-repeat"></i>
+                </span>
+              </div>
+            </div>
+          </article>
+          <article class="clock">
+            <div class="article-content">
+              <h2 class="clock__time"></h2>
+              <h4 class="clock__date"></h4>
+            </div>
+          </article>
+          <article class="quote">
+            <div class="article-content">
+              <div class="quote__display">
+                <h2>Today Quote</h2>
+                <p class="quote__text"></p>
+                <span class="quote__author"></span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+    <section class="login-container">
+      <article class="login">
+      <h1>Hello, what's your name?</h1>
+      <form id="login-form">
+        <input required maxlength="15" type="text">
+        <!--<input type="submit" value="Log In">-->
+      </form>
+      </article>
+    </section>
+
+    <script src="https://kit.fontawesome.com/9dd62352a5.js" crossorigin="anonymous"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/greetings.js"></script>
+    <script src="js/song.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quote.js"></script>
+  </body>
+</html>

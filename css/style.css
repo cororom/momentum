@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap");
+
+@import "reset.css";
+@import "variables.css";
+
+@import "main.css";
+@import "weather.css";
+@import "clock.css";
+@import "todo.css";
+@import "login.css";
+@import "greeting.css";
+@import "song.css";
+@import "quote.css";
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.hidden {
+  display: none;
+}

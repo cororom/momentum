@@ -1,0 +1,58 @@
+.weather h1 {
+  font-size: 24px;
+  font-weight: var(--title-weight);
+}
+
+.weather__today .weather__main {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.weather__text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+
+.weather__text span {
+  display: block;
+  line-height: 25px;
+}
+
+.weather__text span:first-child {
+  font-weight: var(--title-weight);
+  font-size: 19px;
+}
+
+.weather__text span:last-child {
+  color: var(--font-gray);
+}
+
+.weather__today .weather__icon {
+  font-size: 50px;
+}
+
+.weather__humidity span,
+.weather__wind span {
+  padding-left: 10px;
+}
+
+.weather__daily {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0px;
+}
+
+.weather__daily .weather__icon {
+  font-size: 20px;
+}
+
+.weather__summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather__summary span:last-child {
+  margin-left: 10px;
+}

@@ -1,0 +1,117 @@
+.container {
+  background: var(--dark-gray);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  width: 1340px;
+  height: 700px;
+  background: white;
+  border-radius: 3.5rem;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.content-left {
+  background: var(--light-gray);
+  width: 30%;
+  height: 100%;
+  border-top-left-radius: 3.5rem;
+  border-bottom-left-radius: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: var(--main-padding);
+  box-sizing: border-box;
+}
+
+.content-left__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-left article {
+  margin-top: 60px;
+}
+
+.content-left .article-content {
+  margin-top: 25px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.article-content {
+  padding: 30px;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.article-content::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.article-content:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.content-center {
+  width: 40%;
+  height: 100%;
+  padding: var(--main-padding);
+  box-sizing: border-box;
+}
+
+.content-center .article-content,
+.content-right .article-content {
+  background: var(--light-gray);
+}
+
+.content-center .article-content:hover {
+  background: var(--yellow);
+}
+
+.content-right {
+  width: 30%;
+  height: 100%;
+  padding: var(--main-padding);
+  box-sizing: border-box;
+}
+
+.content-right .article-content {
+  margin-top: 25px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 35px;
+  height: 26px;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 5px;
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0px 5px;
+  border-radius: 9px;
+  background: var(--yellow);
+  color: white;
+}

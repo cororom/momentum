@@ -1,0 +1,133 @@
+#todo-form input {
+  border: none;
+  border-bottom: 1px solid #e6ebed;
+  background: 0;
+  width: 100%;
+  height: 40px;
+  padding: 4px 2px 1px;
+  line-height: var(--line-height);
+  font-size: 1.7rem;
+}
+
+#todo-form input:first-child::placeholder {
+  color: white;
+  text-align: center;
+}
+
+.todo {
+  box-sizing: border-box;
+}
+
+.todo h1 {
+  font-size: 30px;
+  font-weight: var(--title-weight);
+}
+
+#todo-form input {
+  margin: 20px 0px;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    border-bottom: 2px solid var(--yellow);
+  }
+  to {
+    width: 100%;
+    border-bottom: 2px solid var(--yellow);
+  }
+}
+
+#todo-form input:focus {
+  animation: slideIn 0.5s linear forwards;
+}
+
+.todo-list {
+  height: 498px;
+  overflow-y: scroll;
+}
+
+.todo-list::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 3px 10px;
+}
+
+.todo-row__checkbox {
+  position: relative;
+  display: inline-block;
+}
+
+.todo-row__checkbox input {
+  display: none;
+}
+
+.todo-row__checkbox label {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.todo-row__checkbox label:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin: -0.2em 8px 0 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.todo-row__checkbox input:checked + label:before {
+  background-color: #25b7c7;
+  border-color: #25b7c7;
+  background-image: url("../image/checkbox.png");
+}
+
+.todo-row__checkbox input:checked + label {
+  text-decoration: line-through;
+  color: #968787;
+}
+
+.todo-row .fa-square-minus {
+  color: red;
+  display: inline-block;
+  font-size: 22px;
+}
+
+.todo-row.remove-item {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

@@ -1,0 +1,8 @@
+.greetings {
+  box-sizing: border-box;
+}
+
+#greeting {
+  font-size: 30px;
+  font-weight: var(--title-weight);
+}

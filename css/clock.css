@@ -1,0 +1,12 @@
+.clock {
+  line-height: var(--line-height);
+}
+
+.clock__time {
+  font-weight: var(--title-weight);
+  font-size: 26px;
+}
+
+.clock__date {
+  color: var(--font-gray);
+}
