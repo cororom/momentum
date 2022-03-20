@@ -5,7 +5,7 @@ const nextBtn = document.querySelector(".forward");
 const randomBtn = document.querySelector(".random");
 const repeatBtn = document.querySelector(".repeat");
 
-const audio = document.getElementById('audio');
+const audio = document.querySelector("#audio");
 const progress = document.querySelector(".progress__played");
 const progressContainer = document.querySelector(".progress__bar");
 const title = document.querySelector(".song__title");
@@ -20,7 +20,7 @@ const songs = [
   "Jake Miller - Parties",
   "Aria Ohlsson - Love On The Weekend",
   "Munn - I Pick Loneliness",
-  "Gervs - Another Day"
+  "Gervs - Another Day",
 ];
 
 // Keep track of song
@@ -126,7 +126,7 @@ function randomSong() {
 
 // Repeat song
 function repeatSong() {
-  repeatBoolean = (repeatBoolean === false) ? true : false;
+  repeatBoolean = repeatBoolean === false ? true : false;
   randomIndex = undefined;
   randomBtn.querySelector("i.fa-solid").classList.remove("active");
   if (repeatBoolean === true) {
@@ -176,7 +176,7 @@ function setTimeFormat(time) {
 
 // Event listeners
 playBtn.addEventListener("click", () => {
-  const isPlaying = musicContainer.classList.contains('play');
+  const isPlaying = musicContainer.classList.contains("play");
 
   if (isPlaying) {
     pauseSong();
@@ -201,4 +201,4 @@ progressContainer.addEventListener("click", setProgress);
 audio.addEventListener("ended", nextSong);
 
 // Time of song
-audio.addEventListener('timeupdate', DurTime);
+audio.addEventListener("timeupdate", DurTime);

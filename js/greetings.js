@@ -15,6 +15,10 @@ function saveUsername(username) {
 function logoutSubmit() {
   localStorage.removeItem(USERNAME_KEY);
   greeting.textContent = "";
+  const isPlaying = musicContainer.classList.contains("play");
+  if (isPlaying) {
+    pauseSong();
+  }
   loginContainer.classList.remove(HIDDEN_CLASSNAME);
 }
 
