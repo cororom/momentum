@@ -53,6 +53,7 @@
   justify-content: space-between;
 }
 
+.weather__main span:last-child,
 .weather__summary span:last-child {
   margin-left: 10px;
 }

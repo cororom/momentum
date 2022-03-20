@@ -16,6 +16,7 @@ const weatherIconList = {
   13: "far fa-snowflake",
   50: "fas fa-smog",
 };
+const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 function onGeoOk(position) {
   const lat = position.coords.latitude;
@@ -37,11 +38,14 @@ function onGeoOk(position) {
     .then((data) => {
       for (let i = 0; i < 4; i++) {
         const dailyWeatherIcon = document.querySelector(`.weather__daily.row${i} .weather__icon`);
+        const dailyWeek = document.querySelector(`.weather__daily.row${i} .weather__day`);
         const dailyTempMax = document.querySelector(`.weather__daily.row${i} .weather__temp-max`);
         const dailyTempMin = document.querySelector(`.weather__daily.row${i} .weather__temp-min`);
         if (dailyWeatherIcon) {
           const icon = data.daily[i].weather[0].icon.substr(0, 2);
+          const day = new Date(data.daily[i].dt * 1000).getDay();
           dailyWeatherIcon.innerHTML = `<i class="${weatherIconList[icon]}"></i>`;
+          dailyWeek.textContent = `${week[day]}`;
           dailyTempMax.textContent = `${Math.floor(data.daily[i].temp.max)}º`;
           dailyTempMin.textContent = `${Math.floor(data.daily[i].temp.min)}º`;
         }
