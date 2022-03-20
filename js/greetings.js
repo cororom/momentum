@@ -39,10 +39,9 @@ function paintGreetings(username) {
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-if (savedUsername === null) {
-  loginForm.addEventListener("submit", onLoginSubmit);
-} else {
+if (savedUsername !== null) {
   paintGreetings(savedUsername);
 }
 
+loginForm.addEventListener("submit", onLoginSubmit);
 logoutBtn.addEventListener("click", logoutSubmit);
