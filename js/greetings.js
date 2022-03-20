@@ -19,6 +19,8 @@ function logoutSubmit() {
   if (isPlaying) {
     pauseSong();
   }
+  localStorage.removeItem(TODOS_KEY);
+  toDoList.textContent = "";
   loginContainer.classList.remove(HIDDEN_CLASSNAME);
 }
 
